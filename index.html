@@ -636,7 +636,45 @@ dialog ul {
     flex-direction: column;
   }
 }
+  .city-photo-box {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.city-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-photo-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    transparent 65%
+  );
+}
+
+.city-overlay-text {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  z-index: 2;
+}
 </style>
+  
 </head>
 
 <body>
@@ -685,48 +723,17 @@ dialog ul {
 
     <!-- ORIGINAL CSS-FREE SVG CITY ILLUSTRATION -->
 
-    <svg class="city-art" viewBox="0 0 500 340"
-      xmlns="http://www.w3.org/2000/svg">
+    <div class="hero-art">
+  <div class="city-photo-box">
 
-      <circle cx="370" cy="80" r="48" fill="#e9bb6b"/>
+    <img src="./Dhaka.jpeg" alt="Dhaka City">
 
-      <path d="M0 290 L0 190 L65 190 L65 135 L110 135
-      L110 205 L150 205 L150 115 L205 115 L205 190
-      L255 190 L255 145 L310 145 L310 200 L360 200
-      L360 125 L415 125 L415 185 L500 185 L500 340
-      L0 340Z" fill="#b4d8c9"/>
-
-      <path d="M0 260 L50 260 L50 180 L105 180
-      L105 245 L160 245 L160 160 L225 160 L225 245
-      L275 245 L275 180 L340 180 L340 250
-      L400 250 L400 190 L500 190 L500 340
-      L0 340Z" fill="#4e9c83"/>
-
-      <path d="M0 290 L500 290 L500 340 L0 340Z"
-      fill="#235d4d"/>
-
-      <path d="M0 308 Q250 280 500 308"
-      stroke="#d5e8d9" stroke-width="4" fill="none"/>
-
-      <g fill="#eaf6f2">
-        <rect x="67" y="200" width="8" height="13"/>
-        <rect x="85" y="200" width="8" height="13"/>
-        <rect x="173" y="180" width="10" height="15"/>
-        <rect x="193" y="180" width="10" height="15"/>
-        <rect x="288" y="195" width="10" height="15"/>
-        <rect x="315" y="195" width="10" height="15"/>
-        <rect x="365" y="145" width="10" height="16"/>
-        <rect x="389" y="145" width="10" height="16"/>
-      </g>
-
-      <path d="M0 340 L500 340" stroke="#123b34"
-      stroke-width="3"/>
-
-      <text x="250" y="325" text-anchor="middle"
-      fill="white" font-size="12" letter-spacing="3">
+    <div class="city-overlay-text">
       OUR CITY, OUR FUTURE
-      </text>
-    </svg>
+    </div>
+
+  </div>
+</div>
 
   </div>
 </section>
